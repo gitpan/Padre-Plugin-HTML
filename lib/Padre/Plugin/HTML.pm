@@ -3,18 +3,18 @@ package Padre::Plugin::HTML;
 use warnings;
 use strict;
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 use base 'Padre::Plugin';
 use Padre::Wx ();
 
 sub padre_interfaces {
-	'Padre::Plugin'   => 0.26,
+	'Padre::Plugin'   => 0.43,
 	'Padre::Document' => 0.21,
 }
 
 sub registered_documents {
-	'text/html' => 'Padre::Document::HTML',
+	'text/html' => 'Padre::Plugin::HTML::Document',
 }
 
 sub menu_plugins_simple {
@@ -23,6 +23,9 @@ sub menu_plugins_simple {
 		'Tidy HTML', sub { $self->tidy_html },
 		'HTML Lint', sub { $self->html_lint },
 		'Validate HTML',  sub { $self->validate_html },
+		'Docs'=> [
+			'HTML 4.01 Specification', sub { Padre::Wx::launch_browser('http://www.w3.org/TR/html401/'); },
+		],
 	]);
 }
 
@@ -118,11 +121,11 @@ sub html_lint {
 	my $text;
 	my $error_count = $lint->errors;
 
-    foreach my $error ( $lint->errors ) {
-        $text .= $error->as_string . "\n";
-    }
+	foreach my $error ( $lint->errors ) {
+		$text .= $error->as_string . "\n";
+	}
     
-    $text = 'OK' unless ( length($text) );
+	$text = 'OK' unless ( length($text) );
 	$self->_output($text);
 }
 
@@ -140,6 +143,10 @@ use L<WebService::Validator::HTML::W3C> to validate the HTML
 =head1 Tidy HTML
 
 use L<HTML::Tidy> to tidy HTML
+
+=head1 HTML Lint
+
+use L<HTML::Lint> to ?????
 
 =head1 AUTHOR
 

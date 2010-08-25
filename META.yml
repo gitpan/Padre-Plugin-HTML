@@ -1,29 +1,32 @@
 ---
-name: Padre-Plugin-HTML
-version: 0.09
+abstract: 'L<Padre> and HTML'
 author:
   - 'Fayland Lam <fayland@gmail.com>'
-abstract: L<Padre> and HTML
+build_requires:
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3614'
 license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Padre-Plugin-HTML
+provides:
+  Padre::Plugin::HTML:
+    file: lib/Padre/Plugin/HTML.pm
+    version: 0.10
+  Padre::Plugin::HTML::Document:
+    file: lib/Padre/Plugin/HTML/Document.pm
+    version: 0.10
+requires:
+  HTML::Lint: 0
+  HTML::Tidy: 0
+  Padre: 0.43
+  WebService::Validator::HTML::W3C: 0
+  XML::XPath: 0
 resources:
   homepage: http://padre.perlide.org/
   license: http://dev.perl.org/licenses/
   repository: http://svn.perlide.org/padre/trunk/Padre-Plugin-HTML/
-build_requires:
-  HTML::Lint: 0
-  HTML::Tidy: 0
-  Padre: 0.26
-  Test::More: 0
-  WebService::Validator::HTML::W3C: 0
-  XML::XPath: 0
-provides:
-  Padre::Document::HTML:
-    file: lib/Padre/Document/HTML.pm
-    version: 0.23
-  Padre::Plugin::HTML:
-    file: lib/Padre/Plugin/HTML.pm
-    version: 0.09
-generated_by: Module::Build version 0.33
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+version: 0.10
