@@ -1,22 +1,12 @@
-#!/usr/bin/perl
+#!perl
 
-#use 5.008;
 use strict;
+use warnings;
 
-# taken straight from the Padre test
-# 01-load.t
-
+use Test::NeedsDisplay ':skip_all';
 use Test::More;
-
-BEGIN {
-	if ( not $ENV{DISPLAY} and not $^O eq 'MSWin32' ) {
-		plan skip_all => 'Needs DISPLAY';
-		exit 0;
-	}
-}
 
 plan tests => 1;
 
 use_ok('Padre::Plugin::HTML');
-
 diag("Testing Padre::Plugin::HTML $Padre::Plugin::HTML::VERSION, Perl $], $^X");

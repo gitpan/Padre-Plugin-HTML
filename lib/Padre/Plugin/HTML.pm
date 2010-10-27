@@ -1,6 +1,6 @@
 package Padre::Plugin::HTML;
 BEGIN {
-  $Padre::Plugin::HTML::VERSION = '0.11';
+  $Padre::Plugin::HTML::VERSION = '0.12';
 }
 
 # ABSTRACT: L<Padre> and HTML
@@ -146,7 +146,7 @@ Padre::Plugin::HTML - L<Padre> and HTML
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 Validate HTML
 

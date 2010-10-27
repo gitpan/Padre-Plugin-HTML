@@ -20,7 +20,7 @@ my %module_build_args = (
     'Ahmad M. Zawawi <ahmad.zawawi@gmail.com>'
   ],
   'dist_name' => 'Padre-Plugin-HTML',
-  'dist_version' => '0.11',
+  'dist_version' => '0.12',
   'license' => 'perl',
   'module_name' => 'Padre::Plugin::HTML',
   'recommends' => {},

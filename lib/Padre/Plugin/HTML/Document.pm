@@ -1,6 +1,6 @@
 package Padre::Plugin::HTML::Document;
 BEGIN {
-  $Padre::Plugin::HTML::Document::VERSION = '0.11';
+  $Padre::Plugin::HTML::Document::VERSION = '0.12';
 }
 
 use 5.008;
@@ -32,7 +32,7 @@ Padre::Plugin::HTML::Document
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 AUTHORS
 
