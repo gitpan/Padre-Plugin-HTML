@@ -14,13 +14,13 @@ my %module_build_args = (
   'configure_requires' => {
     'Module::Build' => '0.3601'
   },
-  'dist_abstract' => 'L<Padre> and HTML',
+  'dist_abstract' => 'HTML Support for Padre',
   'dist_author' => [
     'Fayland Lam <fayland@gmail.com>',
     'Ahmad M. Zawawi <ahmad.zawawi@gmail.com>'
   ],
   'dist_name' => 'Padre-Plugin-HTML',
-  'dist_version' => '0.12',
+  'dist_version' => '0.13',
   'license' => 'perl',
   'module_name' => 'Padre::Plugin::HTML',
   'recommends' => {},

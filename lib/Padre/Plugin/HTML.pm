@@ -1,9 +1,9 @@
 package Padre::Plugin::HTML;
 BEGIN {
-  $Padre::Plugin::HTML::VERSION = '0.12';
+  $Padre::Plugin::HTML::VERSION = '0.13';
 }
 
-# ABSTRACT: L<Padre> and HTML
+# ABSTRACT: HTML Support for Padre
 
 use warnings;
 use strict;
@@ -142,11 +142,11 @@ sub html_lint {
 
 =head1 NAME
 
-Padre::Plugin::HTML - L<Padre> and HTML
+Padre::Plugin::HTML - HTML Support for Padre
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 Validate HTML
 
